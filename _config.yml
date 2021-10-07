@@ -1,5 +1,8 @@
-title: "Besturingssystemen Exercises"
+title: "Besturingssystemen"
 remote_theme: pmarsceill/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: light
@@ -53,6 +56,9 @@ search:
 heading_anchors: true
 
 collections:
+  course:
+    permalink: "/:collection/:path/"
+    output: true
   oefeningen:
     permalink: "/:collection/:path/"
     output: true
@@ -62,6 +68,8 @@ collections:
 
 just_the_docs:
   collections:
+    course:
+      name: Besturingssysteemen
     oefeningen:
       name: Oefenzittingen
     tutorials:
