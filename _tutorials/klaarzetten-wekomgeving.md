@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Klarzetten Werkomgeving
+title: Klaarzetten Werkomgeving
 nav_order: 1
 nav_exclude: false
 ---

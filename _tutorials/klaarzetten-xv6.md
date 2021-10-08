@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Klarzetten Xv6
+title: Klaarzetten Xv6
 nav_order: 1
 nav_exclude: false
 ---
