@@ -1,3 +1,10 @@
+---
+layout: default
+title: Debugging in xv6
+nav_order: 1
+nav_exclude: false
+---
+
 - [Installatie](#installatie)
 - [Breakpoints](#breakpoints)
 - [Stepping](#stepping)
