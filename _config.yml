@@ -15,11 +15,15 @@ aux_links:
     - "//classroom.github.com/classrooms/91612922-besturingssystemen-2021-2022"
   "Q&A Forum":
     - "//github.com/besturingssystemen/xv6-riscv/discussions"
+  "xv6 boek":
+    - "//github.com/besturingssystemen/xv6-riscv-book/releases/latest/download/book.pdf"
+  "Syllabus":
+    - "//onderwijsaanbod.kuleuven.be/syllabi/n/G0Q35AN.htm"
+   "Uurrooster":
+   -  "https://webwsp.aps.kuleuven.be/sap(bD1ubCZjPTIwMA==)/public/bsp/sap/z_mijnuurrstrs/uurrooster.htm?sap-params=YmVndXVyX2ZpcnN0PTEwJTNhMzAlM2EwMCZlbmR1dXJfbGFzdD0xNiUzYTAwJTNhMDAmb3R5cGU9U00mb2JqaWQ9NTAzMDcwNzQmc2Nfb2JqaWQ9MDAwMDAwMDAmc2Vzc2lvbmlkPTAwNTA1Njk0QzhDMzFFRUM4QTgyNzgyMUNCQkQzNjZGJnR5cGVfZ3JvZXA9"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
-
-
+aux_links_new_tab: true
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -74,4 +78,3 @@ just_the_docs:
       name: Oefenzittingen
     tutorials:
       name: Tutorials
-
