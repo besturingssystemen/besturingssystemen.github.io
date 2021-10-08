@@ -3,17 +3,18 @@ remote_theme: pmarsceill/just-the-docs
 
 plugins:
   - jekyll-remote-theme
+  - jemoji
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: light
 
 # Aux links for the upper right navigation
 aux_links:
-  "Toledo":
+  "Toledocursus":
     - "//p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course&course_id=_1012677_1&handle=cp_announcements&mode=cpview"
-  "Classroom":
+  "GitHub Classroom":
     - "//classroom.github.com/classrooms/91612922-besturingssystemen-2021-2022"
-  "Forum":
+  "Q&A Forum":
     - "//github.com/besturingssystemen/xv6-riscv/discussions"
   "xv6 boek":
     - "//github.com/besturingssystemen/xv6-riscv-book/releases/latest/download/book.pdf"
