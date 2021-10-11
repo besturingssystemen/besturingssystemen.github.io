@@ -3,6 +3,8 @@ layout: default
 title: Cursusinformatie
 nav_order: 1
 permalink: /
+redirect_from:
+  - /website
 ---
 
 # Algemeen

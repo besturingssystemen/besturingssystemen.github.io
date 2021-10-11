@@ -8,16 +8,7 @@ The website is built directly from Markdown files. You can find the website conf
 
 ## Local setup
 
-To test this setup locally, you will probably need `bundler`. Below you can find some links on the whole topic but for a quick start, create a `Gemfile` in the repository with the following content:
-
-```ruby
-source 'https://rubygems.org'
-gem "github-pages"
-gem "just-the-docs"
-gem "jekyll-remote-theme"
-```
-
-Now, you can execute:
+To test this setup locally, you will probably need `bundler`. Below you can find some links on the whole topic but for a quick start, execute:
 
 ```shell
 bundle install

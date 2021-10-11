@@ -4,6 +4,7 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-remote-theme
   - jemoji
+  - jekyll-redirect-from
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: light
