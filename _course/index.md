@@ -19,3 +19,15 @@ Aan elke zitting is op voorhand een voorbereiding en nadien een permanente evalu
 De permanente evaluatie (tesamen met deelname aan de kaartjessessies) staat op 45% van de punten van dit vak.
 
 > :warning: De permanente evaluatie kan *niet* ingehaald worden in tweede zit!
+
+# Deadlines
+
+| Oefenzitting  | Datum sessie | Deadline permanente evaluatie |
+|:--------------|:-------------|:------------------------------|
+| OS Interfaces | 6 oktober    | 12/10 23h59 - 1 week
+| System calls  | 13 oktober   | 26/10 23h59 - 2 weeks
+| Virtual Memory| 27 oktober   | 10/11 23h59 - 2 weeks
+| Traps         | 10 november  | 16/11 23h59 - 1 week
+| Locks         | 17 november  | 30/11 23h59 - 2 weeks
+| File  systems | 1 december   | 07/12 23h59 - 1 week
+| TBA           | 8 december   | 21/12 23h59 - 2 weeks
