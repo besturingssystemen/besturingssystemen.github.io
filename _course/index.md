@@ -22,12 +22,12 @@ De permanente evaluatie (tesamen met deelname aan de kaartjessessies) staat op 4
 
 # Deadlines
 
-| Oefenzitting  | Datum sessie | Deadline permanente evaluatie |
-|:--------------|:-------------|:------------------------------|
-| OS Interfaces | 6 oktober    | 12/10 23h59 - 1 week
-| System calls  | 13 oktober   | 26/10 23h59 - 2 weeks
-| Virtual Memory| 27 oktober   | 10/11 23h59 - 2 weeks
-| Traps         | 10 november  | 16/11 23h59 - 1 week
-| Locks         | 17 november  | 30/11 23h59 - 2 weeks
-| File  systems | 1 december   | 07/12 23h59 - 1 week
-| TBA           | 8 december   | 21/12 23h59 - 2 weeks
+| Oefenzitting  | Datum sessie | Deadline permanente evaluatie | Voorbereiding
+|:--------------|:-------------|:------------------------------|:-------------
+| OS Interfaces | 6 oktober    | 12/10 23h59 - 1 week  | xv6 boek H1
+| System calls  | 13 oktober   | 26/10 23h59 - 2 weeks | xv6 boek H2
+| Virtual Memory| 27 oktober   | 10/11 23h59 - 2 weeks | xv6 boek H3, kennis concepten `virtual memory`, `paging` en `page tables` ([video](https://www.youtube.com/watch?v=JgTXJ-ZV5Zw))
+| Traps         | 10 november  | 16/11 23h59 - 1 week  | xv6 boek H4 + H5
+| Locks         | 17 november  | 30/11 23h59 - 2 weeks | xv6 boek H6 + H7
+| File  systems | 1 december   | 07/12 23h59 - 1 week  | xv6 boek H8
+| TBA           | 8 december   | 21/12 23h59 - 2 weeks | TBA
