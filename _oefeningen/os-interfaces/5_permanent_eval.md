@@ -5,7 +5,9 @@ nav_order: 5
 parent: "Zitting 1: OS Interfaces"
 ---
 
-# Communicerende processen
+# Communicerende processen 
+Permanente evaluatie
+{: .label .label-yellow}
 
 We weten nu hoe we user space programma's kunnen toevoegen aan xv6.
 Als laatste deel van deze oefenzitting en als *permanente evaluatie* is het de bedoeling dat je het programma `introspection.c` uitbreidt _in een nieuw bestand_ genaamd `evaluation.c`.
