@@ -21,7 +21,7 @@ aux_links:
   "Syllabus":
     - "//onderwijsaanbod.kuleuven.be/syllabi/n/G0Q35AN.htm"
   "Uurrooster":
-    - "//webwsp.aps.kuleuven.be/sap(bD1ubCZjPTIwMA==)/public/bsp/sap/z_mijnuurrstrs/uurrooster.htm?sap-params=YmVndXVyX2ZpcnN0PTEwJTNhMzAlM2EwMCZlbmR1dXJfbGFzdD0xNiUzYTAwJTNhMDAmb3R5cGU9U00mb2JqaWQ9NTAzMDcwNzQmc2Nfb2JqaWQ9MDAwMDAwMDAmc2Vzc2lvbmlkPTAwNTA1Njk0QzhDMzFFRUM4QTgyNzgyMUNCQkQzNjZGJnR5cGVfZ3JvZXA9"
+    - "//www.kuleuven.be/sapredir/uurrooster/pre_laden.htm?OBJID=50307074&OTYPE=SM&TAAL=N&SEL_JAAR=2021"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
