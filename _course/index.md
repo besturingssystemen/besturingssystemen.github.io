@@ -4,7 +4,7 @@ title: Cursusinformatie
 nav_order: 1
 permalink: /
 redirect_from:
-  - /website
+  - /website/
 ---
 
 # Algemeen
