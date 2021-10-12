@@ -2,6 +2,7 @@
 layout: default
 title: "Aanmaak processen"
 nav_order: 1
+search_exclude: true
 parent: "Zitting 2: System calls"
 ---
 

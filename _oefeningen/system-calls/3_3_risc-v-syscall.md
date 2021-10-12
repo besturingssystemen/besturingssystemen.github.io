@@ -4,6 +4,7 @@ title: "Oefening: RISC-V System call"
 nav_order: 3
 parent: "System calls vs function calls"
 grand_parent: "Zitting 2: System calls"
+search_exclude: true
 ---
 
 # RISC-V System Call

@@ -3,6 +3,7 @@ layout: default
 title: "Zitting 2: System calls"
 nav_order: 1
 nav_exclude: true
+search_exclude: true
 has_children: true
 has_toc: false
 ---

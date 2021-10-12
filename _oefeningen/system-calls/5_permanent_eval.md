@@ -3,6 +3,7 @@ layout: default
 title: "Permanente evaluatie"
 nav_order: 5
 parent: "Zitting 2: System calls"
+search_exclude: true
 ---
 
 # Traceme

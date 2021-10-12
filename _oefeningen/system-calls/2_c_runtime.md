@@ -2,6 +2,7 @@
 layout: default
 title: "Oefening: C Runtime"
 nav_order: 2
+search_exclude: true
 parent: "Zitting 2: System calls"
 ---
 

@@ -4,6 +4,7 @@ title: RISC-V vs DRAMA
 nav_order: 1
 parent: "System calls vs function calls"
 grand_parent: "Zitting 2: System calls"
+search_exclude: true
 ---
 
 Denk terug aan functie-oproepen in DRAMA in het vak SOCS. Conceptueel gezien zijn deze identiek hetzelfde. SOCS gebruikt echter nederlandstalige termen voor vele concepten, dit kan tot verwarring leiden. Hier een snelle cheat sheet:
