@@ -3,7 +3,6 @@ layout: default
 title: "Oefening: xv6 system call toevoegen"
 nav_order: 4
 parent: "Zitting 2: System calls"
-search_exclude: true
 ---
 
 In de vorige sessie hebben we geleerd hoe je een user-space programma kan toevoegen aan xv6.

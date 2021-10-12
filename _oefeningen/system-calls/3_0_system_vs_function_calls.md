@@ -3,7 +3,6 @@ layout: default
 title: "System calls vs function calls"
 nav_order: 3
 parent: "Zitting 2: System calls"
-search_exclude: true
 has_children: true
 has_toc: false
 ---
@@ -38,4 +37,4 @@ De echte syscall gebeurt dus in de implementatie van de `write` wrapper-functie.
 Deze wrappers moeten echter op assembly-niveau geïmplementeerd worden.
 Het is dus tijd om terug in assembly te duiken.
 
-> :exclamation: `puts` en andere functies zoals `printf` maken intern ook gebruik van de system call `write`. Het is niet mogelijk te schrijven zonder een system call. Dat verandert niets aan het feit dat oproepen naar `puts` en `printf` gewone function calls zijn.
+> :exclamation: `puts` en andere functies zoals `printf` maken intern ook gebruik van de system call `write`. Het is niet mogelijk te schrijven naar de console zonder een system call. Dat verandert niets aan het feit dat oproepen naar `puts` en `printf` gewone function calls zijn.

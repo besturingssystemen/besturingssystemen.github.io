@@ -15,4 +15,4 @@ In deze oefenzitting leren jullie over de werking van system calls in xv6.
 Ter voorbereiding van deze oefenzitting word je verwacht:
 
 * De oefenzitting [os interfaces](../os-interfaces) te hebben voltooid.
-* Hoofdstuk 2 van het [xv6 boek](https://github.com/besturingssystemen/xv6-riscv) te hebben gelezen.
+* Hoofdstuk 2 van het [xv6 boek](https://github.com/besturingssystemen/xv6-riscv-book/releases/latest/download/book.pdf) te hebben gelezen.

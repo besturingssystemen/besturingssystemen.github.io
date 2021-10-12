@@ -2,7 +2,6 @@
 layout: default
 title: GitHub Classroom
 nav_order: 0
-search_exclude: true
 parent: "Zitting 2: System calls"
 ---
 

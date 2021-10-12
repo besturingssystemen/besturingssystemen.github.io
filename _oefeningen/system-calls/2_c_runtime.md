@@ -2,7 +2,6 @@
 layout: default
 title: "Oefening: C Runtime"
 nav_order: 2
-search_exclude: true
 parent: "Zitting 2: System calls"
 ---
 
@@ -15,7 +14,7 @@ Een proces wordt gestart met behulp van `exec` door een programma in te laden en
 In vele Linux-distributies wordt gebruik gemaakt van [crt0](https://en.wikipedia.org/wiki/Crt0) om C-programma's te starten.
 Het entry point van een C executable wordt geplaatst in `crt0`, vaak in een functie genaamd `_start`.
 
-`_start` in `crt0` is dan het absolute beginpunt bij het uitvoering van een uit C gecompileerde executable. `_start` initialiseert typisch de C-runtime (dit is niet nodig voor de eenvoudige runtime van xv6) en roept vervolgens `main` op. Na uitvoering van `main` wordt de return-value van `main` doorgegeven aan de `exit` system call. Zo wordt het proces afgesloten.
+`_start` in `crt0` is dan het absolute beginpunt bij de uitvoering van een uit C gecompileerde executable. `_start` initialiseert typisch de C-runtime (dit is niet nodig voor de eenvoudige runtime van xv6) en roept vervolgens `main` op. Na uitvoering van `main` wordt de return-value van `main` doorgegeven aan de `exit` system call. Zo wordt het proces transparant afgesloten.
 
 Om het mogelijk te maken om te returnen uit `main` zonder exceptions, voegen we nu onze eigen `crt0` toe aan xv6.
 
@@ -36,6 +35,6 @@ void _start(int argc, char* argv[])
 ```
 
 * Pas het entry point (`-e` flag) aan dat aan [`ld` wordt gegeven][ld rule] in de `Makefile` van xv6
-* Test nu je implementatie van `crt0` door `user/helloworld.c` te bewerken. Vervang je oproep naar `exit` door een `return` uit `main`. Indien `crt0` correct is geïmplementeerd, krijg je geen user exception na uitvoering van het programma.
+* Test nu je implementatie van `crt0` door een eenvoudig `user/helloworld.c` programma te schrijven met een `return` uit `main` (in plaats van een oproep naar `exit`, zoals in de vorige oefenzitting). Indien `crt0` correct is geïmplementeerd, krijg je geen user exception na uitvoering van het programma. Eventueel kan je extra `puts` print statements toevoegen om de uitvoering in `crt0` te volgen.
 
 [ld rule]: https://github.com/besturingssystemen/xv6-riscv/blob/2b5934300a404514ee8bb2f91731cd7ec17ea61c/Makefile#L97

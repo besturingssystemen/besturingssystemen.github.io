@@ -2,7 +2,6 @@
 layout: default
 title: "Aanmaak processen"
 nav_order: 1
-search_exclude: true
 parent: "Zitting 2: System calls"
 ---
 
@@ -39,7 +38,7 @@ Deze system call maakt een kopie van het huidige proces.
 
 In detail begrijpen hoe een proces gekopieerd wordt, is op dit punt in de oefenzittingen nog te vroeg. We kunnen wel al tonen welke state een besturingssysteem bewaart per proces.
 
-* Bekijk [struct proc][struct proc] gedefinieerd in `proc.h` in xv6.
+* Bekijk [`struct proc`][struct proc] gedefinieerd in `proc.h` in xv6.
 * Lees de comments bij elk veld van de `struct`.
   
 Het nut van de velden `parent`, `pid`, `sz`, `ofile`, `cwd` en `name` zou duidelijk moeten zijn. Vraag verduidelijking aan een assistent indien dit niet het geval is.
@@ -54,7 +53,7 @@ De velden `lock`, `chan` en `xstate` hebben te maken met synchronizatie en worde
 
 ### Trapframe
 
-Begrip van het veld `trapframe` is belangrijk voor deze oefenzitting. Wanneer een proces de controle doorgeeft aan het besturingssysteem bij het uitvoeren van een *system call* of wanneer een proces onderbroken wordt door bijvoorbeeld een interrupt, gebeurt dit via een *trap*.
+Begrip van het veld `trapframe` in de `struct proc` is belangrijk voor deze oefenzitting. Wanneer een proces de controle doorgeeft aan het besturingssysteem bij het uitvoeren van een *system call* of wanneer een proces onderbroken wordt door bijvoorbeeld een interrupt, gebeurt dit via een *trap*.
 
 Een *trap* in user-mode zorgt ervoor dat de processor schakelt naar supervisor-mode en vervolgens de *trap handler* begint uit te voeren. Deze handler is een stuk machinecode op een vaste locatie in het geheugen.
 
@@ -79,7 +78,7 @@ Op dit moment zou je een idee moeten hebben van de state die per proces bewaard 
 De `fork` system call zal als een van zijn taken de process state kopiëren voor het nieuwe proces. Nadat een proces gekopieerd is, is het in vele gevallen de bedoeling dat het nieuwe proces een eigen taak toegewezen krijgt.
 De meest gangbare manier om het proces een nieuwe taak toe te wijzen, maakt gebruik van de system call `exec`.
 
-`exec` neemt als invoer een uitvoerbaar bestand (programma) en vervangt de code en data in het huidige proces door deze in het uitvoerbare bestand. Vervolgens wordt gesprongen naar het *entry point* van het programma. Op deze manier krijgt het geforkte proces een nieuwe taak toegewezen.
+`exec` neemt als invoer een pad naar een uitvoerbaar bestand (programma) en vervangt de code en data in het huidige proces door deze in het uitvoerbare bestand. Vervolgens wordt gesprongen naar het *entry point* van het programma. Op deze manier krijgt het geforkte proces een nieuwe taak toegewezen.
 
 Om samen te vatten wordt een proces in UNIX aangemaakt door
 een combinatie van de system call `fork`, dat de processtructuur kopieert, en `exec`, dat een nieuw programma

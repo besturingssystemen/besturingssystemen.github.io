@@ -3,7 +3,6 @@ layout: default
 title: "Permanente evaluatie"
 nav_order: 5
 parent: "Zitting 2: System calls"
-search_exclude: true
 ---
 
 # Traceme
@@ -22,7 +21,14 @@ Als permanente evaluatie van deze oefenzitting is het de bedoeling om zelfstandi
 
 # Testen
 
-TODO
+We hebben een paar simpele testen gegeven die jullie kunnen gebruiken om te verifiëren dat er geen grote fouten gemaakt zijn.
+Je kan deze uitvoeren via het volgende commando:
+
+```console
+[ubuntu-shell]$ make test
+```
+
+Let wel: we kijken jullie code ook nog handmatig na en het feit dat de testen slagen, wilt dus niet zeggen dat je een perfecte score zal halen!.
 
 # Deadline
 
