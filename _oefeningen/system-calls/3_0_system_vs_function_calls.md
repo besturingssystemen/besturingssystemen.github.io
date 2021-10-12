@@ -3,6 +3,7 @@ layout: default
 title: "System calls vs function calls"
 nav_order: 3
 parent: "Zitting 2: System calls"
+search_exclude: true
 has_children: true
 has_toc: false
 ---

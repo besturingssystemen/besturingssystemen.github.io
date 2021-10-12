@@ -4,6 +4,7 @@ title: "Oefening: RISC-V function call"
 nav_order: 2
 parent: "System calls vs function calls"
 grand_parent: "Zitting 2: System calls"
+search_exclude: true
 ---
 
 # Assembly function calls
