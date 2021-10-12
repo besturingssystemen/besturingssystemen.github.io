@@ -83,7 +83,7 @@ main:                   # Definieer het symbool main
 
 In RISC-V worden functie-parameters in de eerste plaats doorgegeven via de registers `a0` - `a7`. Wanneer er niet genoeg registers zijn voor het aantal parameters, worden extra parameters via de stack meegegeven. Een volledige beschrijving van de compiler-conventies voor een RISC-V functie-oproep kan je vinden in de [RISC-V calling conventions](https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf).
 
-* Voeg nu een bestand `user/hello_asm_puts.S` toe. Je moet manueel de functie `puts` oproepen met als argument de string "Hello, world!". Je kan vertrekken van de volgende assembly-code:
+* Voeg nu een bestand `user/hi_asm_puts.S` toe. Je moet manueel de functie `puts` oproepen met als argument de string "Hello, world!". Je kan vertrekken van de volgende assembly-code:
 
  ```s
 .text
@@ -98,7 +98,7 @@ main:
 hello_str: .string "Hello, world!"
 ```
 
-* Voeg `$U/_hello_asm_puts\` aan [`UPROGS`][UPROGS] in de Makefile
+* Voeg `$U/_hi_asm_puts\` aan [`UPROGS`][UPROGS] in de Makefile
 * Implementeer `main`. Denk hierbij aan het bewaren van het return address in `ra` voor je een functie oproept.
 
 [UPROGS]: https://github.com/besturingssystemen/xv6-riscv/blob/2b5934300a404514ee8bb2f91731cd7ec17ea61c/Makefile#L122

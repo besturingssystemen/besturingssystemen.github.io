@@ -16,7 +16,7 @@ De trap handler zal vervolgens de oorzaak van de trap bepalen. Indien de trap ve
 Er wordt dus gesprongen naar de system call handler, met name de functie `syscall(void)`.
 
 * Bekijk de functie [`syscall`][syscall] in de code van xv6. Welk register wordt hier gebruikt om te bepalen welke system call opgeroepen moet worden?
-* Voeg nu een bestand `user/hello_asm_write.S` toe (let op de hoofdletter `S` in de extensie). Maak gebruik van de `ecall` instructie om de system call `write` uit te voeren. Je zal het register uit bovenstaande vraag moeten gebruiken om de correcte system call op te vragen. Je kan starten vanuit onderstaande code:
+* Voeg nu een bestand `user/hi_asm_write.S` toe (let op de hoofdletter `S` in de extensie). Maak gebruik van de `ecall` instructie om de system call `write` uit te voeren. Je zal het register uit bovenstaande vraag moeten gebruiken om de correcte system call op te vragen. Je kan starten vanuit onderstaande code:
 
 ```s
 #include "kernel/syscall.h"
