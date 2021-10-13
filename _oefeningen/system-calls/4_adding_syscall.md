@@ -65,7 +65,7 @@ We zullen ervoor zorgen dat onze C-runtime na afloop van ons programma print hoe
 
 Indien dit correct werkt zullen de user-space programma's die returnen uit main het aantal uitgevoerde system calls printen.
 
-* Voer nu het programma `hello_asm_write` uit. Welk resultaat krijg je? Is dit het resultaat dat je verwacht had? Kan je achterhalen welke system calls werden uitgevoerd in het proces die je niet zelf expliciet hebt opgeroepen?
+* Voer nu het programma `hi_asm_write` uit. Welk resultaat krijg je? Is dit het resultaat dat je verwacht had? Kan je achterhalen welke system calls werden uitgevoerd in het proces die je niet zelf expliciet hebt opgeroepen?
 
 [struct proc]: https://github.com/besturingssystemen/xv6-riscv/blob/2b5934300a404514ee8bb2f91731cd7ec17ea61c/kernel/proc.h#L94
 [allocproc]: https://github.com/besturingssystemen/xv6-riscv/blob/2b5934300a404514ee8bb2f91731cd7ec17ea61c/kernel/proc.c#L100
