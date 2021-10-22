@@ -11,7 +11,7 @@ Een referentieoplossing voor deze oefenzitting is beschikbaar via de `os-intefac
 
 Als je de oplossingen lokaal wil bekijken, kan je deze branch uitchecken:
 
-```
+```bash
 git checkout os-interfaces
 ```
 
@@ -27,3 +27,4 @@ Per oefening is er een commit gemaakt die je via de onderstaande links kan bekij
 * Check steeds de return waarden van system calls en standard library functies voor een mogelijke foutcode. In de permanente evaluatieoefening kunnen zowel `pipe()` als `fork()` een foutcode teruggeven.
 * Hardcode _nooit_ pointer adressen in je applicatie (bv. als hexadecimale getallen `0xbadc0debadc0de`). Gebruik steeds de runtime return waarde van `sbrk()` als pointer naar een adres op de heap. Zelfs als je adressen zou hardcoden die je bv. met `gdb` hebt opgezocht, geeft dit _geen_ garantie op correctheid in volgende uitvoeringen van je programma(!) Het besturingssysteem is namelijk altijd vrij om je applicatie op een ander adres in te laden (zelfs al is dit niet het geval voor xv6).
 * Return in C nooit het address van een lokale, stack-gealloceerde variable. Wanneer je hier later, na de functieaanroep, van leest of naar schrijft, zal dit stack geheugen immers terug vrijgegeven zijn en zelfs mogelijks overschreven door een andere functieaanroep.
+* Er is een groot verschil tussen ```sizeof(struct memlayout)``` en ```sizeof(struct memlayout*)```. Het eerste geeft de grootte in bytes van een `struct memlayout`, het tweede geeft de grootte in bytes van een pointer.
