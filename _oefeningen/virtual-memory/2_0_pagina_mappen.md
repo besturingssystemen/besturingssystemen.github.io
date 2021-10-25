@@ -11,7 +11,7 @@ has_toc: false
 
 Voor we duiken in de code van xv6 willen we eerst verzekeren dat je begrijpt hoe een besturingssysteem ervoor kan zorgen dat een specifiek virtueel adres van een proces gemapt wordt op een fysiek adres in het werkgeheugen.
 
-Herinnner je dat een virtueel adres in een RISC-V processor die het Sv39 schema volgt, 39 bits lang is. xv6 is ontworpen voor dit RISC-V schema.
+Zoals uitgelegd in het xv6-boek, is het xv6-riscv besturingssysteem ontworpen voor RISC-V processoren die het Sv39 schema volgen, waarbij een virtueel adres 39 bits lang is.
 
 Onderstaande voorstelling vinden we terug in de [RISC-V privileged specification](https://riscv.org/technical/specifications/):
 
@@ -46,9 +46,10 @@ Neem aan dat:
    
 Je moet nu, als besturingssysteem, ervoor zorgen dat wanneer het nieuwe proces `MAXVA-PGZISE` probeert te dereferencen, de RISC-V hardware dit kan vertalen naar de eerste byte van frame 1234.
 
-* Welke stappen moet xv6 zetten om ervoor te zorgen dat deze adresvertaling correct uitgevoerd wordt?  Neem aan dat de top-level page table reeds bestaat en dat dit de enige page table is die al gealloceerd is voor dit proces.
-  * Hoeveel page tables moet het besturingssysteem aanmaken?
-  * Welke waarden moeten in deze tables ingevuld worden?
+* Welke stappen moet xv6 zetten om ervoor te zorgen dat deze adresvertaling correct uitgevoerd wordt? Neem aan dat de top-level page directory, a.k.a. "page-table page", reeds bestaat en dat dit de enige page-table page is die al gealloceerd is voor dit proces.
+  * Maak een tekening van de adrestranslatie en hoe de virtuele adresbits gebruikt worden (cf. Fig 3.2 in het xv6-boek).
+  * Hoeveel page-table pages moet het besturingssysteem aanmaken?
+  * Welke waarden moeten in deze page-table pages ingevuld worden?
 
 > :bulb: De vraag kan ook zo gesteld worden: hoe kan een besturingssysteem de trampolinepagina mappen op frame 1234?
 
