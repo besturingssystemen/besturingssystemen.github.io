@@ -1,13 +1,13 @@
 ---
 layout: default
-title: ELF
+title: Extra informatie: Implementatie van exec in xv6
 nav_exclude: true
 nav_order: 3
 parent: "extra"
 grand_parent: "Zitting 3: Virtual memory"
 ---
 
-## Exec
+# Extra informatie: Implementatie van exec in xv6
 
 Om `exec` te begrijpen is het belangrijk om eerst te snappen wat we bedoelen wanneer we spreken over een *executable*.
 Een executable file of uitvoerbaar bestand bevat de volledige informatie, onder andere de machinecode en data, die nodig is om een bepaald programma uit te voeren.

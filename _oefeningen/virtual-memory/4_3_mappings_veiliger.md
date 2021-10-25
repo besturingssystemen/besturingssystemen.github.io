@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Proces mappings veiliger maken
+title: Oefening: Proces mappings veiliger maken
 nav_order: 9
 parent: "Levenscyclus proces"
 grand_parent: "Zitting 3: Virtual memory"
 ---
 
-## Proces mappings veiliger maken
+## Oefening: Proces mappings veiliger maken
 
 In sectie 3.8 van het xv6 boek wordt uitgelegd hoe `exec` secties uit een ELF file in het geheugen laadt via [`uvmalloc`][uvmalloc]. 
 
-> :information_source: Een gedetailleerde uitleg over ELF-files kan je ook [hier](extra/elf) terugvinden.
+> :information_source: Een gedetailleerde uitleg over ELF-files kan je ook [hier](../extra/elf) terugvinden.
 
 We gaan dit nu wat meer in detail bekijken via het volgende programma (in `hello.c`):
 

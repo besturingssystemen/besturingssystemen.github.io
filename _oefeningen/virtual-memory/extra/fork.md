@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Fork
+title: Extra informatie: Implementatie van fork in xv6
 nav_exclude: true
 nav_order: 3
 parent: "extra"
 grand_parent: "Zitting 3: Virtual memory"
 ---
 
-# fork
+# Extra informatie: Implementatie van fork in xv6
 
 * Bekijk de implementatie van [`fork`][fork] in [`kernel/proc.c`][proc]
 

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Page tables in xv6
+title: Extra informatie: Implementatie van page tables in xv6
 nav_exclude: true
 nav_order: 3
 parent: "extra"
 grand_parent: "Zitting 3: Virtual memory"
 ---
 
-# Page tables in xv6
+# Extra informatie: Implementatie van page tables in xv6
 
 xv6 gebruikt een hoop [C preprocessor](https://en.wikipedia.org/wiki/C_preprocessor) definities om deze page tables correct te initialiseren en bewerken. In de header [`kernel/riscv.h`][riscv] worden vele van deze preprocessor functies gedefinieerd. 
 De geïnteresseerden kunnen eens een kijkje nemen in deze header.
