@@ -35,6 +35,7 @@ void _start(int argc, char* argv[])
 ```
 
 * Pas het entry point (`-e` flag) aan dat aan [`ld` wordt gegeven][ld rule] in de `Makefile` van xv6
-* Test nu je implementatie van `crt0` door een eenvoudig `user/helloworld.c` programma te schrijven met een `return` uit `main` (in plaats van een oproep naar `exit`, zoals in de vorige oefenzitting). Indien `crt0` correct is geïmplementeerd, krijg je geen user exception na uitvoering van het programma. Eventueel kan je extra `puts` print statements toevoegen om de uitvoering in `crt0` te volgen.
+* Test nu je implementatie van `crt0` door een eenvoudig `user/helloworld.c` programma te schrijven met een `return` uit `main` (in plaats van een oproep naar `exit`, zoals in de vorige oefenzitting). Let op: het bestand `user/helloworld.c` van de vorige oefenzitting zit niet meer in deze repository, en je zal dus een nieuw bestand moeten aanmaken. 
+* Indien `crt0` correct is geïmplementeerd, krijg je geen user exception na uitvoering van het programma. Eventueel kan je extra `puts` print statements toevoegen om de uitvoering in `crt0` te volgen.
 
 [ld rule]: https://github.com/besturingssystemen/xv6-riscv/blob/2b5934300a404514ee8bb2f91731cd7ec17ea61c/Makefile#L97

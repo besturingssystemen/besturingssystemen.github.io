@@ -19,6 +19,10 @@ Als permanente evaluatie van deze oefenzitting is het de bedoeling om zelfstandi
 * Maak een user-space programma `trace` dat een executable als argument krijgt en deze executable oproept met de `traceme` functionaliteit aangezet.
   * Hint: gebruik de system calls `traceme` en `exec`
 
+# Deadline
+
+De deadline van deze permanente evaluatie valt op 26 oktober om 23h59.
+
 # Testen
 
 We hebben een paar simpele testen gegeven die jullie kunnen gebruiken om te verifiëren dat er geen grote fouten gemaakt zijn.
@@ -30,16 +34,29 @@ Je kan deze uitvoeren via het volgende commando:
 
 Let wel: we kijken jullie code ook nog handmatig na en het feit dat de testen slagen, wilt dus niet zeggen dat je een perfecte score zal halen!.
 
-# Deadline
+> :warning: Zorg steeds voor het indienen dat de testen zowel lokaal als in de GitHub Actions cloud werken.
 
-De deadline van deze permanente evaluatie valt op 26 oktober om 23h59.
+> :bulb: De testen worden automatisch uitgevoerd op GitHub wanneer je nieuwe code pusht.
+> Verifieer dat alles werkt door naar de "Actions" tab te gaan op de GitHub
+> webinterface van je repository (of kijk naar het groene vinkje of rode
+> kruisje dat naast je commit verschijnt).
 
 # Indienen
 
+Dit deel van de opgave moet ingediend worden en telt mee voor de permanente evaluatie van de oefeningen.
 Dien je oplossing in met behulp van GitHub classroom.
 
-> :bulb: De testen worden automatisch uitgevoerd op GitHub wanneer je nieuwe code pusht.
-> Verifieer dat alles werkt door naar de "Actions" tab te gaan.
+* Commit en push de bestanden naar je repository
+
+```console
+[ubuntu-shell]$ git status # Aangepaste en nieuwe bestanden zijn aangegeven in het rood onder de heading "Changes not staged for commit" en "Untracked files"
+[ubuntu-shell]$ git add . # Voeg alle aangepaste bestanden toe die nodig zijn
+[ubuntu-shell]$ git status # Alle bestanden die je wil committen zouden nu aangegeven moeten zijn in het groen onder de heading "Changes to be committed"
+[ubuntu-shell]$ git commit -m "Permanente evaluatie system calls"
+[ubuntu-shell]$ git push
+```
+
+> :bulb: Controleer op de webpagina van je repository of het bestand correct gecommit is en de GitHub Actions testen slagen.
 
 # Bonusoefening
 

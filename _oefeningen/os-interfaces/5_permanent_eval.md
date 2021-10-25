@@ -70,6 +70,13 @@ Je kan deze uitvoeren via het volgende commando:
 
 Let wel: we kijken jullie code ook nog handmatig na en het feit dat de testen slagen, wilt niet zeggen dat je een perfecte score zult halen!.
 
+> :warning: Zorg steeds voor het indienen dat de testen zowel lokaal als in de GitHub Actions cloud werken.
+
+> :bulb: De testen worden automatisch uitgevoerd op GitHub wanneer je nieuwe code pusht.
+> Verifieer dat alles werkt door naar de "Actions" tab te gaan op de GitHub
+> webinterface van je repository (of kijk naar het groene vinkje of rode
+> kruisje dat naast je commit verschijnt).
+
 ## Indienen
 
 Dit deel van de opgave moet ingediend worden en telt mee voor de permanente evaluatie van de oefeningen.
@@ -77,12 +84,12 @@ Dit deel van de opgave moet ingediend worden en telt mee voor de permanente eval
 * Commit en push het bestand `evaluation.c` naar je repository
 
 ```console
-[ubuntu-shell]$ git add user/evaluation.c #Voeg ook andere aangepaste bestanden toe die nodig zijn
+[ubuntu-shell]$ git status # Aangepaste en nieuwe bestanden zijn aangegeven in het rood onder de heading "Changes not staged for commit" en "Untracked files"
+[ubuntu-shell]$ git add user/evaluation.c # Voeg ook andere aangepaste bestanden toe die nodig zijn
+[ubuntu-shell]$ git status # Alle bestanden die je wil committen zouden nu aangegeven moeten zijn in het groen onder de heading "Changes to be committed"
 [ubuntu-shell]$ git commit -m "Added introspection program"
 [ubuntu-shell]$ git push
 ```
 
 > :bulb: Controleer op de webpagina van je repository of het bestand correct gecommit is.
 
-> :bulb: De testen worden automatisch uitgevoerd op GitHub wanneer je nieuwe code pusht.
-> Verifieer dat alles werkt door naar de "Actions" tab te gaan.
