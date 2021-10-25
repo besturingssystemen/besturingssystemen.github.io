@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Oefening: Proces mappings veiliger maken
+title: "Oefening: Proces mappings veiliger maken"
 nav_order: 9
 parent: "Levenscyclus proces"
 grand_parent: "Zitting 3: Virtual memory"
@@ -15,6 +15,7 @@ In sectie 3.8 van het xv6 boek wordt uitgelegd hoe `exec` secties uit een ELF fi
 We gaan dit nu wat meer in detail bekijken via het volgende programma (in `hello.c`):
 
 ```c
+#include "kernel/types.h"
 #include "user/user.h"
 
 int message_id = 42;
@@ -37,7 +38,7 @@ int main()
 
 Laten we eens kijken wat de secties zijn in het gecompileerde ELF bestand:
 <pre>
-$ readelf -l user/_hello
+[ubuntu-shell]$ riscv64-linux-gnu-readelf -l user/_hello
 
 Elf file type is EXEC (Executable file)
 Entry point 0x83a
