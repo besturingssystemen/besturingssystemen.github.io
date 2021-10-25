@@ -2,7 +2,7 @@
 layout: default
 title: Page tables
 nav_order: 3
-parent: "Pagina mappen"
+parent: "Adrestranslatie in xv6"
 grand_parent: "Zitting 3: Virtual memory"
 ---
 

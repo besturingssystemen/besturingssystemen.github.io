@@ -32,6 +32,6 @@ Eender welk onschuldig, geïnstalleerd programma zou je besturingssysteem kunnen
 Het zou voldoende zijn om eigen code te schrijven naar een pagina van de kernel, vervolgens `ecall` uit te voeren (waardoor de processor naar supervisor mode switcht) en ervoor te zorgen dat de trap handler jouw nieuwe code uitvoert in plaats van de oude kernel code.
 Op dat moment wordt je code uitgevoerd met de volle rechten van het OS. Het onschuldige programma heeft dus volledige controle over alles wat er verder gebeurt op jouw machine.
 
-Virtual memory zorgt ervoor dat je geen toegang hebt tot het geheugen van de kernel.
-Virtual memory zorgt er ook voor dat je geen toegang hebt tot het geheugen van andere processen.
+Door gebruik te maken van een beschermde trampolinepagina en een aparte virtuele adresruimte voor de kernel, zorgt xv6 ervoor dat applicaties geen rechtstreekse toegang hebben tot het geheugen van de kernel.
+Virtual memory zorgt er verder ook voor dat je geen toegang hebt tot het geheugen van andere processen.
 Zo kan je browser niet aan de inhoud van je password manager, enzovoort.

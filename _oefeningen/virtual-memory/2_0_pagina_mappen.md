@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Pagina mappen
+title: Adrestranslatie in xv6
 nav_order: 2
 parent: "Zitting 3: Virtual memory"
 has_children: true
 has_toc: false
 ---
 
-# Pagina mappen
+# Adrestranslatie in xv6
 
 Voor we duiken in de code van xv6 willen we eerst verzekeren dat je begrijpt hoe een besturingssysteem ervoor kan zorgen dat een specifiek virtueel adres van een proces gemapt wordt op een fysiek adres in het werkgeheugen.
 
