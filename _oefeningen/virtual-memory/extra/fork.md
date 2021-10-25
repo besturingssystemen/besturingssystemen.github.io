@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Extra informatie: Implementatie van fork in xv6
+title: "Extra informatie: Implementatie van fork in xv6"
 nav_exclude: true
 nav_order: 3
 parent: "extra"

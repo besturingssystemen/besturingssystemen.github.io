@@ -109,11 +109,12 @@ We gaan dus code toevoegen om de flags van een mapping aan te passen en gelijk t
   Deze functie moet voor alle pagina's in het interval `[va, va + len)` de flags van de PTE op `flags` zetten.
     - Gebruik [`walk`][walk] om de PTE van een virtueel adres te krijgen.
     - De constante [`PTE_FLAGS_MASK`][PTE_FLAGS_MASK] kan gebruikt worden om de flag bits in een PTE te masken.
-      Je kan de volgende code gebruiken om de flags te overschrijven (hoe werkt dit?):
+      Je kan de volgende code gebruiken om de flags te overschrijven (probeer te begrijpen hoe dit werkt!): 
       ```c
       *pte &= ~PTE_FLAGS_MASK;
       *pte |= (flags & PTE_FLAGS_MASK);
       ```
+    - Een goede gewoonte is om checks toe te voegen om zeker te ziin dat niets fataal misloopt. Hiervoor kan je altijd de functie `panic(char *info)` gebruiken om de kernel af te sluiten met een foutboodschap als iets fataal misloopt dat je niet verwacht onder normale omstandigheden.
 - Roep `vmsetflags` op in `exec` na het laden van elke sectie.
   Om de juiste flags mee te geven, moet je de ELF flags (in [`struct proghdr`][struct proghdr]) vertalen naar de juiste PTE flags.
   Gebruik hiervoor de [constanten][ELF flags consts] gedefinieerd in [`elf.h`][elf.h].
