@@ -63,6 +63,12 @@ Jullie opdracht bestaat nu uit het volgende:
 
 # Bonus: Null pointer exception
 
+> :warning: Deze oefening is zeer uitdagend en zal veel tijd kosten om correct te implementeren.
+> Bonusoefeningen heb je in dit vak niet nodig om het maximum te scoren op de permanente evaluaties.
+> Er kan een score hoger dan het maximum behaald worden door het maken van een bonusoefening, dit is echter beperkt tot maximumscore van 12 op 10.
+> In het geval van deze oefening is de tijdsinvestering voor deze 2 extra punten dus buitenproportioneel.
+> Probeer deze oefening enkel indien je tijd over hebt en dit interessant vindt, maak hier zeker geen prioriteit van!
+
 * Compileer en voer in je Linuxdistributie (niet in xv6) het volgende simpele programma uit:
 
 ```c
