@@ -122,7 +122,7 @@ We gaan dus code toevoegen om de flags van een mapping aan te passen en gelijk t
 
 Verifieer je implementatie via de `vmprintmappings` syscall.
 
-> :information_source: In deze oefening moeten we bepaalde bits in page table entries aanpassen. Om met bitvoorstellingen van getallen te werken in C gebruiken we de bitwise operatoren zoals `&` (AND), `|` (OR) en `~` (NOT). Voor meer informatie kan je [hier](https://en.wikipedia.org/wiki/Bitwise_operations_in_C) terecht.
+> :information_source: In deze oefening moeten we bepaalde bits in page table entries aanpassen. Om met bitvoorstellingen van getallen te werken in C gebruiken we de bitwise operatoren zoals `&` (AND), `|` (OR) en `~` (NOT). Voor meer informatie kan je [hier](https://github.com/informaticawerktuigen/oefenzitting-c/tree/main/les3-bits-and-bytes#bitoperatoren) terecht.
 
 [walk]: https://github.com/besturingssystemen/xv6-riscv/blob/d4cecb269f2acc61cc1adc11fec2aa690b9c553b/kernel/vm.c#L81
 [uvmalloc]: https://github.com/besturingssystemen/xv6-riscv/blob/720a130ceafcc55ec3624b47e8a1368f3f5f00ae/kernel/vm.c#L215
