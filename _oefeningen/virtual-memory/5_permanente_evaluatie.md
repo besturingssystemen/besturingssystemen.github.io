@@ -69,6 +69,9 @@ Jullie opdracht bestaat nu uit het volgende:
 > In het geval van deze oefening is de tijdsinvestering voor deze 2 extra punten dus buitenproportioneel.
 > Probeer deze oefening enkel indien je tijd over hebt en dit interessant vindt, maak hier zeker geen prioriteit van!
 
+> :warning: When you start this bonus exercise, open the file `exercises.json` and set the variable `bonus_exercise` to `true`. This will make sure that the
+> automatic tests now also test the bonus exercise (and we have a clear marker that you want the bonus exercise to be graded!)
+
 * Compileer en voer in je Linuxdistributie (niet in xv6) het volgende simpele programma uit:
 
 ```c
