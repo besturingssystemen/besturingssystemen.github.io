@@ -3,9 +3,7 @@ layout: default
 title: "Zitting 4: Traps"
 nav_order: 4
 has_children: true
-has_toc: true
-nav_exclude: true
-search_exclude: true
+has_toc: false
 ---
 
 In deze sessie gaan we dieper in op het concept traps.
