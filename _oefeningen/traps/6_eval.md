@@ -24,7 +24,7 @@ C-programma's gebruiken typisch echter de functies [`malloc`][malloc ref] en [`f
 Deze functies zijn in user space geïmplementeerd en gebruiken intern syscalls zoals `sbrk` om geheugen te krijgen van de kernel.
 Om het aantal syscalls laag te houden, zullen deze functie typisch meer geheugen van de kernel vragen dan ze nodig hebben.
 
-1. Schrijf een programma die 1 byte op de heap alloceert via `malloc(1)` en ga na hoeveel geheugen er via `sbrk` gevraagd wordt.
+* Schrijf een programma die 1 byte op de heap alloceert via `malloc(1)` en ga na hoeveel geheugen er via `sbrk` gevraagd wordt.
    Je kan dit bijvoorbeeld doen door in GDB een breakpoint te zetten in de [`sys_sbrk`][sys_sbrk] functie of door daar een print toe te voegen.
 
 Zoals je gezien zou moeten hebben, alloceert de [`malloc` implementatie van xv6][umalloc.c] een stuk [meer geheugen][over alloc] dan er gevraagd wordt.
@@ -34,7 +34,7 @@ In deze oefening gaan we [_demand paging_][demand paging] implementeren voor het
 Het idee is het volgende: wanneer er via `sbrk` extra geheugen voor het proces gevraagd wordt, wordt dit geheugen niet onmiddellijk in het proces gemapt.
 Pas wanneer het process dit geheugen probeert te gebruiken, en er dus een page fault gebeurt, zal de kernel een frame alloceren en mappen op het adres dat het process probeerde te gebruiken.
 
-2. Voeg een functie `void pagefault(uint64 va)` toe aan [`vm.c`][vm.c].
+* Voeg een functie `void pagefault(uint64 va)` toe aan [`vm.c`][vm.c].
    Het `va` argument zal aangeven welk virtueel adres werd aangesproken toen de page fault gebeurde.
    Print hier voorlopig een boodschap af en stop het huidige process door de [`struct proc::killed`][proc killed] variabele op `1` te zetten voor het huidige proces.
 
@@ -43,7 +43,7 @@ Dit vervangt het normale gedrag waarbij deze exceptions er gewoon voor zorgt dat
 
 > :bulb: Instruction page faults vangen we niet op. De heap is namelijk niet executable. Als een user space programma springt naar een gedeelte lazy heap willen we dit niet mappen, enkel indien er gelezen of geschreven wordt.
 
-3. Zorg ervoor dat `void pagefault(uint64 va)` opgeroepen wordt wanneer er een page fault in user mode voorkomt.
+* Zorg ervoor dat `void pagefault(uint64 va)` opgeroepen wordt wanneer er een page fault in user mode voorkomt.
    Bekijk hiervoor de [`usertrap`][usertrap] functie.
    Het virtuele adres dat de page fault veroorzaakte, vind je in het `stval` CSR ([hint][stval hint]).
    Je moet er ook voor zorgen dat interrupts terug enabled worden vóór de uitvoering van je handler, kijk hoe dit gebeurt voor system calls.
@@ -63,7 +63,7 @@ Je kan dit uitvoeren zoals elk ander user space programma.
 De volgende stap is om `sbrk` _lazy_ te laten werken.
 Zoals eerder beschreven, wilt dit zeggen dat geheugen niet direct in het proces gemapt wordt tijdens een oproep van `sbrk`.
 
-4. Zoek uit hoe `sbrk` precies werkt, begin hiervoor met het lezen van de [`sys_sbrk`][sys_sbrk] functie.
+* Zoek uit hoe `sbrk` precies werkt, begin hiervoor met het lezen van de [`sys_sbrk`][sys_sbrk] functie.
    Als er een positief getal aan `sbrk` wordt gegeven, zal het geheugen van het proces vergroot worden.
    In plaats van dit direct te doen, moet je ervoor zorgen dat de aanvraag enkel geregistreerd wordt zonder geheugen te mappen.
    De [`struct proc::sz`][proc sz] variabele geeft aan hoeveel geheugen een proces gebruikt.
@@ -73,7 +73,7 @@ Na deze stap zullen user space processen die `sbrk` gebruiken uiteraard niet mee
 Wat verwacht je dat er gebeurt met zulke processen?
 Verifieer dit ook.
 
-5. Implementeer nu de logica in de page fault handler om pages _on demand_ te mappen.
+* Implementeer nu de logica in de page fault handler om pages _on demand_ te mappen.
    De functie [`kalloc`][kalloc] kan je gebruiken om nieuwe fysieke frames to alloceren en in de vorige oefenzitting hebben jullie al geleerd hoe je mappings kan maken via [`mappages`][mappages].
    Er zijn een aantal zaken waar je op moet letten:
     - Voeg enkel mappings toe voor adressen die eerder via `sbrk` gealloceerd waren (denk aan de [`struct proc::sz`][proc sz] variabele);
@@ -88,7 +88,7 @@ Er zijn een aantal functies in xv6 die afdwingen dat alle pages tussen `[0, stru
 Dit is begrijpelijk aangezien het (zonder demand paging) een bug zou zijn als dit niet het geval is.
 Nu we demand paging hebben toegevoegd, klopt deze invariant echter niet meer.
 
-6. Vind de functies de een `panic` veroorzaken.
+* Vind de functies de een `panic` veroorzaken.
    Je kan dit bijvoorbeeld doen door [GDB][gdb] te gebruiken en een breakpoint te zetten in de [`panic`][panic] functie.
    Als je dan een backtrace afprint (via het `backtrace` commando), kan je zien waar `panic` opgeroepen werd.
    Los de `panic`s op door op de juiste plekken unmapped pages te negeren.
@@ -100,7 +100,7 @@ Verifieer dit en controleer je implementatie via de `vmprintmappings` syscall.
 
 Als je het `usertests` programma runt, zul je merken dat er toch nog een paar problemen zijn met onze lazy heap allocatie.
 
-7. Schrijf een user space programma dat de `read` en `write` syscalls gebruikt met buffers in nog niet gemapte pages.
+* Schrijf een user space programma dat de `read` en `write` syscalls gebruikt met buffers in nog niet gemapte pages.
    Roep dus eerst `sbrk` op en gebruik een pointer naar dit nieuwe geheugen als buffer _zonder_ dit geheugen eerst te gebruiken (want dan wordt het gemapt).
    Wat is het resultaat en hoe verklaar je dit?
 
@@ -116,7 +116,7 @@ Aangezien dit fysieke adres wel in de kernel gemapt is, kan de data gekopieerd w
 Als `walkaddr` faalt omdat het adres niet gemapt is, zullen de verschillende copy functies een error teruggeven en faalt de syscall.
 Er zal dus geen page fault gebeuren maar het user space programma krijgt een error code terug van de syscall.
 
-8. Pas `copyin`, `copyinstr` en `copyout` aan zodat on demand pages gemapt worden wanneer nodig.
+* Pas `copyin`, `copyinstr` en `copyout` aan zodat on demand pages gemapt worden wanneer nodig.
 
 Als dit gebeurd is, zou het `usertests` programma zonder fouten moeten runnen.
 
