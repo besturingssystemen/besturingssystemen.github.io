@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Zitting 3: Virtual memory"
-nav_order: 1
+nav_order: 3
 nav_exclude: false
 search_exclude: false
 has_children: true
