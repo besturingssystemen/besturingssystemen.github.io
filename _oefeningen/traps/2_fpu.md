@@ -43,9 +43,9 @@ Op RISC-V zijn er 32 floating point registers genaamd `f0` tot `f31`.
    Je zult merken dat het crasht door een exception.
    Welke exception wordt er precies gegenereerd en door welke instructie?
 
-Op RISC-V staat de FPU uit na het opstarten.
-Het [`mstatus`](../../../img/mstatus.png) CSR bevat twee bits (`FS`) die de status van de FPU beheren.
-De FPU kan aangezet worden door `FS` op `01` te zetten.
+   Op RISC-V staat de FPU uit na het opstarten.
+   Het [`mstatus`](../../../img/mstatus.png) CSR bevat twee bits (`FS`) die de status van de FPU beheren.
+   De FPU kan aangezet worden door `FS` op `01` te zetten.
 
 3. Zorg ervoor dat de FPU globaal aanstaat.
    De initiële waarde voor `mstatus` [wordt gezet][write mstatus] in de functie [`start`][start], de eerste C-functie die in de kernel wordt uitgevoerd.
@@ -54,13 +54,13 @@ De FPU kan aangezet worden door `FS` op `01` te zetten.
    Je kan de FPU dus aanzetten door de eerste bit van `FS` (bit 13 van `mstatus`) op 1 te zetten in de variabele `x`.
    > :bulb: Je kan in C een getal maken dat enkel bit 13 op 1 heeft staan via `(1 << 13)`.
 
-> :information_source: De Linux kernel staat voor efficiëntie redenen geen floating point code toe in kernel mode.
-> De FPU zal daar dus niet globaal aanstaan maar enkel bij het switchen naar user mode aangezet worden.
-> Ook de meeste user mode programma's maken geen gebruik van de FPU en het kan dus qua energieverbruik beter zijn om ook voor user space programma's de FPU niet standaard aan te zetten.
-> De kernel zou bijvoorbeeld de exception die gegenereerd wordt wanneer er een floating point instructie gebruikt wordt terwijl de FPU uitstaat op kunnen vangen en de FPU dan pas aanzetten.
-> Om deze oefening eenvoudig te houden, zetten we de FPU globaal aan maar we houden jullie niet tegen om een efficiëntere implementatie uit te proberen.
+   > :information_source: De Linux kernel staat voor efficiëntie redenen geen floating point code toe in kernel mode.
+   > De FPU zal daar dus niet globaal aanstaan maar enkel bij het switchen naar user mode aangezet worden.
+   > Ook de meeste user mode programma's maken geen gebruik van de FPU en het kan dus qua energieverbruik beter zijn om ook voor user space programma's de FPU niet standaard aan te zetten.
+   > De kernel zou bijvoorbeeld de exception die gegenereerd wordt wanneer er een floating point instructie gebruikt wordt terwijl de FPU uitstaat op kunnen vangen en de FPU dan pas aanzetten.
+   > Om deze oefening eenvoudig te houden, zetten we de FPU globaal aan maar we houden jullie niet tegen om een efficiëntere implementatie uit te proberen.
 
-Verifieer nu dat je test programma uitgevoerd kan worden zonder exceptions te genereren.
+   Verifieer nu dat je test programma uitgevoerd kan worden zonder exceptions te genereren.
 
 4. Voeg nu het volgende user space programma toe:
    ```c
