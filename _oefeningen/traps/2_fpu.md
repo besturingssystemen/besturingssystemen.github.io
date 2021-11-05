@@ -105,7 +105,7 @@ Op RISC-V zijn er 32 floating-point registers, genaamd `f0` tot `f31`, en een fl
    Zoals eerder uitgelegd, moet de code in de trampoline de waarden in de general purpose register opslaan in het trapframe om de waarden niet te verliezen.
    De FPU gebruikt echter andere registers en deze worden niet bewaard in het trapframe.
 
-5. Zorg ervoor dat de [floating point registers](../../../img/fpu-state.png) juist opgeslagen en hersteld worden door de trampoline code:
+5. Zorg ervoor dat de [floating point registers](../../../img/fpu-state.png) (FLEN=64 bits) juist opgeslagen en hersteld worden door de trampoline code:
     - Breid [`struct trapframe`][trapframe] uit.
     - Voeg code toe aan de [trampoline][trampoline] om alle floating point registers op te slaan in (gebruik de `fsd` en `csrr` instructies) en weer te herstellen uit (`fld` en `csrw`) het trapframe.
 6. Verifieer dat je test programma nu _wel_ consistente resultaten geeft.
