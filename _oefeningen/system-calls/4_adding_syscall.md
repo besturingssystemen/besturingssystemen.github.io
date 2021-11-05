@@ -5,6 +5,8 @@ nav_order: 4
 parent: "Zitting 2: System calls"
 ---
 
+# Oefening: xv6 system call toevoegen
+
 In de vorige sessie hebben we geleerd hoe je een user-space programma kan toevoegen aan xv6.
 Ondertussen zijn we klaar om onze eerste aanpassing te maken aan de kernel zelf.
 We zullen onze eigen system call toevoegen.
