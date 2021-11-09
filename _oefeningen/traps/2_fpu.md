@@ -11,7 +11,7 @@ Het is je misschien opgevallen dat alle user space programma's die we tot nu toe
 RISC-V ondersteunt ook _floating point_ operaties om niet-gehele getallen te bewerken.
 Op de meeste processoren, alsook op RISC-V, worden zulke operaties uitgevoerd door een zogenaamde _floating point unit_ (FPU).
 Deze FPU zal berekeningen uitvoeren op speciale registers die onafhankelijk zijn van de general purpose registers die gebruikt worden voor integer operaties.
-Op RISC-V zijn er 32 floating point registers genaamd `f0` tot `f31`.
+Op RISC-V zijn er 32 floating-point registers, genaamd `f0` tot `f31`, en een floating-point control and status register genaamd `fcsr`.
 
 1. Voeg het volgende user space programma toe dat gebruikt maakt van floating point operaties:
    ```c
@@ -101,13 +101,13 @@ Op RISC-V zijn er 32 floating point registers genaamd `f0` tot `f31`.
    Merk je iets op?
    Voer dit programma meerdere keren uit en bekijk de resultaten.
 
-Je hebt waarschijnlijk gemerkt dat je inconsistente resultaten krijgt (zo niet, ga terug naar punt 4).
-Zoals eerder uitgelegd, moet de code in de trampoline de waarden in de general purpose register opslaan in het trapframe om de waarden niet te verliezen.
-De FPU gebruikt echter andere registers en deze worden niet bewaard in het trapframe.
+   Je hebt waarschijnlijk gemerkt dat je inconsistente resultaten krijgt (zo niet, ga terug naar punt 4).
+   Zoals eerder uitgelegd, moet de code in de trampoline de waarden in de general purpose register opslaan in het trapframe om de waarden niet te verliezen.
+   De FPU gebruikt echter andere registers en deze worden niet bewaard in het trapframe.
 
-5. Zorg ervoor dat de floating point registers juist opgeslagen en herstelt worden door de trampoline code:
+5. Zorg ervoor dat de [floating point registers](../../../img/fpu-state.png) (FLEN=64 bits) juist opgeslagen en hersteld worden door de trampoline code:
     - Breid [`struct trapframe`][trapframe] uit.
-    - Voeg code toe aan de [trampoline][trampoline] om alle floating point registers op te slaan in (gebruik de `fsd` instructie) en weer te herstellen uit (`fld`) het trapframe.
+    - Voeg code toe aan de [trampoline][trampoline] om alle floating point registers op te slaan in (gebruik de `fsd` en `csrr` instructies) en weer te herstellen uit (`fld` en `csrw`) het trapframe.
 6. Verifieer dat je test programma nu _wel_ consistente resultaten geeft.
 
 [trampoline]: https://github.com/besturingssystemen/xv6-riscv/blob/1f555198d61d1c447e874ae7e5a0868513822023/kernel/trampoline.S
