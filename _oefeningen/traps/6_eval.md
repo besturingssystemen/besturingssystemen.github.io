@@ -98,6 +98,9 @@ Om het aantal syscalls laag te houden, zullen deze functie typisch meer geheugen
 
 ## Bonusoefening
 
+> :warning: When you start this bonus exercise, open the file `exercises.json` and set the variable `bonus_exercise` to `true`. This will make sure that the
+> automatic tests now also test the bonus exercise (and we have a clear marker that you want the bonus exercise to be graded!)
+
 Als je het `usertests` programma runt, zul je merken dat er toch nog een paar problemen zijn met onze lazy heap allocatie.
 
 1. Schrijf een user space programma dat de `read` en `write` syscalls gebruikt met buffers in nog niet gemapte pages.
