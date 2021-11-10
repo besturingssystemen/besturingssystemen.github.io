@@ -36,7 +36,12 @@ Op RISC-V zijn er 32 floating-point registers, genaamd `f0` tot `f31`, en een fl
    Op RISC-V beginnen alle floating point instructies met een `f`, bijvoorbeeld: `fld` (float load), `fadd`, `fmul`.
    Verifieer dat dit programma daadwerkelijk zulke instructies gebruikt door via `objdump` de assembly code van de `get_sum` functie af te printen (vervang `user/_test` door de executable van je eigen programma):
    ```shell
-   riscv64-linux-gnu-objdump --disassemble=get_sum user/_test
+   [ubuntu-shell]$ riscv64-linux-gnu-objdump --disassemble=get_sum user/_test
+   ```
+
+   Merk op dat op de PC klassen, dit commando als volgt moet uitgevoerd worden:
+   ```shell
+   [ubuntu-shell]$ riscv64-unknown-elf-objdump --disassemble=get_sum user/_test
    ```
 
 2. Voer de executable nu uit in xv6.
