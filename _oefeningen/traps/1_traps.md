@@ -119,7 +119,7 @@ Neem bijvoorbeeld aan dat we een exception hebben die zich voordoet in user-mode
 Op het moment dat de processor springt naar de waarde in `stvec` zal `satp` nog steeds verwijzen naar de page table van het user proces.
 De adresvertaling gebeurt dus nog steeds volgens de mapping van het user proces. De processor zal dus springen naar code in de user adresruimte met een hoger privilegeniveau (in dit geval supervisor mode).
 
-Een besturingssysteem zal er dus voor zorgen dat er kernel code geschreven wordt op het adres `stval` en dat het proces zelf deze code niet kan bewerken (door de pagina niet schrijfbaar te maken en de `U`-bit te deactiveren).
+Een besturingssysteem zal er dus voor zorgen dat er kernel code geschreven wordt op het adres `stvec` en dat het proces zelf deze code niet kan bewerken (door de pagina niet schrijfbaar te maken en de `U`-bit te deactiveren).
 De code op dat adres kan vervolgens de waarde van `satp` wijzigen, en zo de page tables van de kernel activeren, om ervoor te zorgen dat we verder kunnen uitvoeren in de adresruimte van de kernel zelf.
 
 De code die verantwoordelijk is voor het opvangen van traps in xv6 bevindt zich in de trampolinepagina.
