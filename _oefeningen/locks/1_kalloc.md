@@ -6,10 +6,23 @@ parent: "Zitting 5: Locks"
 ---
 
 # Achtergrond: Physical memory allocator
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 
 In de oefenzitting over virtual memory hebben we gezien hoe de mappings van virtuele naar fysieke adressen opgesteld worden in xv6.
 De implementatie van lazy allocation bouwde hier op verder en introduceerde de functie [`kalloc`][kalloc] om fysieke frames to alloceren.
 We gaan nu de werking van `kalloc`, de _physical memory allocator_ van xv6, in detail bekijken en de performantie op multi-processor systemen proberen te verbeteren.
+
+## Gebruik van `kalloc()` in xv6
 
 De taak van een physical memory allocator (vanaf nu kortweg `kalloc` genoemd) is, zoals de naam doet vermoeden, het beheer van het fysieke geheugen in het systeem.
 Telkens de kernel meer geheugen nodig heeft, zal deze `kalloc` eerst vragen om een nieuwe fysieke frame, en indien nodig vervolgens dit frame mappen op een virtuele page.
@@ -32,6 +45,8 @@ Een aantal voorbeelden van wanneer dit gebeurt:
 > ```bash
 > grep -n kalloc kernel/*.c
 > ```
+
+## Physical memory map in xv6
 
 Maar hoe beheert `kalloc` het fysieke geheugen precies?
 Om deze vraag te beantwoorden, moeten we eerst bepalen _wat_ `kalloc` precies beheert.
@@ -67,6 +82,8 @@ De kernel kan het fysieke geheugen tussen `[KERNBASE, PHYSTOP)` beheren zoals he
 Een gedeelte wordt in beslag genomen door de code en statische data van de kernel en de rest wordt dynamisch beheerd door `kalloc`.
 xv6 laadt de kernel in het geheugen vanaf `KERNBASE` en definieert een symbool genaamd [`end`][end] om het einde van de kernel aan te geven.
 `kalloc` beheert dus het geheugen tussen `[end, PHYSTOP)`.
+
+## Implementatie van `kalloc()` in xv6
 
 Nu we weten _wat_ er beheerd wordt, kunnen we bekijken _hoe_ het beheerd wordt.
 Laten we eerst de interface die `kalloc` aanbiedt bespreken:
