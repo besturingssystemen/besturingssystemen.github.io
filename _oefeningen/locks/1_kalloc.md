@@ -115,7 +115,7 @@ kmem.freelist = r;
 
 De linked list die door `kalloc` gebruikt wordt, kan "grafisch" dus als volgt voorgesteld worden (zoals meestal bij linked lists wordt het einde aangeven door een `next` pointer die op 0 staat):
 
-```ascii
+```text
 kmem.freelist
       |
       v             |-----------v
