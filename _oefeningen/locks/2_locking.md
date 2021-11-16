@@ -6,6 +6,17 @@ parent: "Zitting 5: Locks"
 ---
 
 # Achtergrond: Locking
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 
 xv6 ondersteunt _multiprocessor_ systemen.
 Dit wil zeggen dat meerdere processoren _tegelijkertijd_ code aan het uitvoeren zijn.
@@ -13,6 +24,8 @@ Deze code kan tot verschillende processen behoren maar het kan ook gebeuren dat 
 Vanaf het moment dat data structuren in de kernel door meerdere processoren gelijktijdig gebruikt worden, kunnen er problemen ontstaan.
 
 > :warning: Synchronizatieproblemen kunnen optreden zelfs zonder multiprocessor systeem. Wanneer twee processen een datastructuur delen en de kernel op willekeurige momenten wisselt tussen deze processen, lijkt het voor de processen alsof ze tegelijkertijd uitgevoerd worden, met standaard synchronizatieproblemen tot gevolg. In kernel space heb je hier op een single core processor minder snel last van, aangezien er maar één kernel is, maar de problematiek komt zelfs dan nog steeds voor. Traps kunnen kernel-code op willekeurige momenten onderbreken waardoor deze code in feite "in parallel" wordt uitgevoerd.
+
+## Kritische sectie in `kalloc`
 
 Neem bijvoorbeeld de volgende vereenvoudigde versie van `kalloc`:
 
@@ -51,6 +64,8 @@ Stel je bijvoorbeeld voor dat één processor `exec` aan het uitvoeren was en de
 > De bovenstaande beschrijving van wat er mis kan gaan met `kalloc` zal enkel gebeuren als er inderdaad twee of meerdere processoren ongeveer tegelijkertijd `kalloc` uitvoeren.
 > Niets garandeert dat dit altijd gebeurt.
 > Het kan dus zijn dat je `usertests` meerdere keren moet uitvoeren voordat je tegen een probleem aanloopt.
+
+## Spinlocks in xv6
 
 Om dit probleem op te lossen, moeten we er voor zorgen dat er maar één processor tegelijkertijd `kmem.freelist` kan manipuleren.
 Dit typische _critical section_ probleem wordt in `kalloc` opgelost via _spinlocks_.
