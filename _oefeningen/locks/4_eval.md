@@ -38,6 +38,14 @@ Wanneer `kalloc` geen frames meer vindt in deze free list, gaat het zoeken in de
 > :bulb: [`kinit`][kinit] wordt door [`main`][main] opgeroepen op CPU 0.
 > Je kan tijdens de initialisatie van `kalloc` alle frames toewijzen aan deze CPU.
 > De andere CPUs zullen dan frames stelen wanneer ze er nodig hebben.
+>
+> Je kan eventueel eerst het simpelste geval van 1 CPU testen, zonder reeds het stelen van frames te implementeren, door xv6 als volgt op te starten:
+> 
+> ```shell
+> [ubuntu-shell]$ CPUS=1 make qemu
+> ```
+> 
+> Zorg hierna dat je stelen van frames correct implementeert en je oplossing ook werkt met meerdere CPUs!
 
 > :bulb: `stressmem` alloceert standaard herhaaldelijk één frame en dealloceert deze onmiddelijk.
 > Dit zal er dus niet voor zorgen dat processors vaak frames moeten stelen.
