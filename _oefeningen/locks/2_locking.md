@@ -156,7 +156,8 @@ void cpu1()
 ```
 
 Het zou kunnen gebeuren dat de instructies in de volgende volgorde uitgevoerd worden:
-```ascii
+
+```text
    cpu0              | cpu1
    ------------------|------------------
 1: acquire(&lock_a); |
@@ -164,6 +165,7 @@ Het zou kunnen gebeuren dat de instructies in de volgende volgorde uitgevoerd wo
 3:                   | acquire(&lock_a);
 4: acquire(&lock_b); |
 ```
+
 In stap 3 zal `cpu1` moeten wachten op `cpu0` omdat `lock_a` genomen werd door `cpu0` in stap 1.
 Tegelijkertijd zal `cpu0` in stap 4 moeten wachten op `cpu1` door `lock_b`.
 Er zal nu geen voortgang meer gemaakt kunnen worden omdat beide processors op elkaar aan het wachten zijn.
