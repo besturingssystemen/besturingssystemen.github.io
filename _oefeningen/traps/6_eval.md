@@ -124,6 +124,7 @@ Als je het `usertests` programma runt, zul je merken dat er toch nog een paar pr
    Als dit gebeurd is, zou het `usertests` programma zonder fouten moeten runnen.
 
 
+[usertrap]: https://github.com/besturingssystemen/xv6-riscv/blob/103d9df6ce3154febadcf9a67791d526ec6b07ac/kernel/trap.c#L37
 [malloc ref]: https://en.cppreference.com/w/c/memory/malloc
 [free ref]: https://en.cppreference.com/w/c/memory/free
 [sys_sbrk]: https://github.com/besturingssystemen/xv6-riscv/blob/103d9df6ce3154febadcf9a67791d526ec6b07ac/kernel/sysproc.c#L41
