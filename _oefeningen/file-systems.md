@@ -12,5 +12,5 @@ has_toc: false
 
 Ter voorbereiding van deze zitting worden jullie verwacht:
 
-* De oefenzitting Synchronizatie te hebben voltoold
-* Hoofdstuk 8 van het [xv6 boek](https://github.com/besturingssystemen/xv6-riscv) te hebben gelezen.
+* De oefenzitting [synchronizatie](../locks) te hebben voltoold;
+* Hoofdstuk 8 van het [xv6 boek](https://github.com/besturingssystemen/xv6-riscv-book/releases/latest/download/book.pdf) te hebben te hebben gelezen.
