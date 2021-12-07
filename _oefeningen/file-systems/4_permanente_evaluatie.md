@@ -20,6 +20,13 @@ Bit 2 van het `mode` veld geeft aan of een bestand executable is.
 
 > :bulb: Stel dat we de waarde 5 bewaren in `mode`. Binair is `5` gelijk aan `0..00101`. Dit wil zeggen dat een bestand met mode 5 readable en executable is.
 
+## Wijzigingen aan de base repository
+
+Om de integratie met de automatische tests te vereenvoudigen hebben we reeds enkele zaken toegevoeged aan jullie xv6 repository.
+
+1. In `kernel/stat.h` hebben we de constanten `M_READ`, `M_WRITE`, `M_EXECUTE` en `M_ALL` toegevoegd. Gebruik deze constanten in jullie oplossing.
+2. We hebben de system call `chmod` (die je in deel 2 zal implementeren) deels toegevoegd. We hebben deze gedefinieerd in `user/user.h` en in `kernel/syscall.h`. Ook hebben we `user/usys.pl` reeds aangepast. De implementatie van `chmod` moeten jullie uiteraard zelf nog geven. Vergeet ook niet om `kernel/syscall.c` correct te bewerken zodat de system call herkend wordt.
+
 ## Deel 1: modes toevoegen
 
 Om permissions te ondersteunen moeten we allereerst voor ieder bestand of directory op de disk de mode bewaren.
