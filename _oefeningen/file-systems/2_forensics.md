@@ -12,7 +12,7 @@ Begrip van de disk layout en interne structuren is voldoende om puur op basis va
 Dit soort skills komen van pas bij data recovery, [forensics](https://en.wikipedia.org/wiki/Computer_forensics), etc... .
 
 In deze oefening gaan we met behulp van hexdump (`hd`) een xv6 file system analyseren.
-Clone deze repository om het bestand forensics.img te downloaden.
+Download hiervoor eerst het bestand [forensics.img](../../../files/forensics.img).
 
 1. Gebruik `hd` om de [`struct superblock`][superblock] te printen.
 
