@@ -5,6 +5,8 @@ nav_order: 1
 parent: "Zitting 6: File Systems"
 ---
 
+# Achtergrond: On-disk File System
+
 Besturingssystemen werken met een geheugenhiërarchie.
 Op het moment dat een OS actief is, zit er bijvoorbeeld code en data in het RAM, in caches en registers.
 Al dit geheugen is echter vluchtig.
@@ -32,8 +34,6 @@ In deze zitting zullen we dieper ingaan op het custom file system van xv6.
 
 Het eerste deel van deze oefenzitting bekijkt het on-disk file system in detail.
 In het tweede deel bekijken hoe xv6 gebruik maakt van dit formaat om te werken met bestanden.
-
-# On-disk file system
 
 ## Block device
 

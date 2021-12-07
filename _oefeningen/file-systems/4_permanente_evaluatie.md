@@ -5,6 +5,8 @@ nav_order: 4
 parent: "Zitting 6: File Systems"
 ---
 
+# Permanente evaluatie
+
 Bestanden in Unix-like systemen bevatten access permissions, ook wel *modes* genoemd.
 Unix-bestanden kunnen read-only, write-only of execute-only gemaakt worden, of een combinatie van deze drie
 In deze permanente evaluatie voegen we een simpele variant van file permissions toe aan xv6.

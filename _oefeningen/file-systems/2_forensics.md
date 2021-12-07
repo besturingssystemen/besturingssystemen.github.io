@@ -5,7 +5,7 @@ nav_order: 2
 parent: "Zitting 6: File Systems"
 ---
 
-### Oefening: Forensics
+# Oefening: Forensics
 
 Om de directories en files in een file system uit te lezen, hebben we geen OS nodig.
 Begrip van de disk layout en interne structuren is voldoende om puur op basis van bytes in een image file te determineren welke bestanden of directories er op de disk staan.
