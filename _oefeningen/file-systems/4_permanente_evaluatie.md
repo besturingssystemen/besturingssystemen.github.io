@@ -20,7 +20,7 @@ Bit 2 van het `mode` veld geeft aan of een bestand executable is.
 
 > :bulb: Stel dat we de waarde 5 bewaren in `mode`. Binair is `5` gelijk aan `0..00101`. Dit wil zeggen dat een bestand met mode 5 readable en executable is.
 
-# Deel 1: modes toevoegen
+## Deel 1: modes toevoegen
 
 Om permissions te ondersteunen moeten we allereerst voor ieder bestand of directory op de disk de mode bewaren.
 Bestanden worden voorgesteld als een `struct dinode` op de disk, een `struct inode` in-memory.
@@ -42,7 +42,7 @@ forktest       2 5 13792 r-x
 grep           2 6 33680 r-x
 ```
 
-# Deel 2: chmod
+## Deel 2: chmod
 
 1. Voeg een system call `int chmod(const char*, int);` toe aan xv6. Deze functie neemt als eerste parameter het pad van een bestand en als tweede parameter de nieuwe bestandspermissies. De system call zorgt ervoor de permissies van het meegegeven bestand aangepast worden. 
 2. Voeg een userspace-programma genaamd `chmod` toe dat als eerste argument een `mode` vraagt en als tweede argument het pad naar een bestand en vervolgens de pemissies van dit bestand aanpast. Bijvoorbeeld:
@@ -55,7 +55,7 @@ $ ls
 README         2 2 2226 rwx
 ```
 
-# Deel 3: permissions controleren
+## Deel 3: permissions controleren
 
 Op dit punt worden permissies bewaard voor de verschillende bestanden. We kunnen deze bekijken met `ls` en aanpassen met `chmod`. 
 Deze permissions worden echter nog niet gecontroleerd.
@@ -64,11 +64,11 @@ Dat is het laatste deel van deze permanente evaluatie.
 1. Bewerk `exec` om ervoor te zorgen dat enkel bestanden die executable gemarkeerd zijn uitgevoerd mogen worden.
 2. Bewerk de `open` syscall. De open syscall opent bestanden met een `omode`. Achterhaal hoe deze gebruikt wordt. Zorg ervoor dat deze syscall enkel slaagt indien de meegegeven `omode` toegestaan is door de file permissions.
 
-# Deadline
+## Deadline
 
 De deadline van deze permanente evaluatie valt op 21 december om 23h59.
 
-# Testen
+## Testen
 
 We hebben een paar simpele testen gegeven die jullie kunnen gebruiken om te verifiëren dat er geen grote fouten gemaakt zijn.
 Je kan deze uitvoeren via het volgende commando:
@@ -86,7 +86,7 @@ Let wel: we kijken jullie code ook nog handmatig na en het feit dat de testen sl
 > webinterface van je repository (of kijk naar het groene vinkje of rode
 > kruisje dat naast je commit verschijnt).
 
-# Indienen
+## Indienen
 
 Dit deel van de opgave moet ingediend worden en telt mee voor de permanente evaluatie van de oefeningen.
 Dien je oplossing in met behulp van GitHub classroom.
