@@ -16,9 +16,9 @@ Download hiervoor eerst het bestand [forensics.img](../../../files/forensics.img
 
 1. Gebruik `hd` om de [`struct superblock`][superblock] te printen.
 
->:bulb: De `-n` flag limiteert het aantal bytes in de output.
-Met `-n 1024` print je dus exact 1 disk block.
-Met `-s` kan je de bytes printen startend van een bepaalde byte offset.
+   >:bulb: De `-n` flag limiteert het aantal bytes in de output.
+   Met `-n 1024` print je dus exact 1 disk block.
+   Met `-s` kan je de bytes printen startend van een bepaalde byte offset.
 
 2. Achterhaal het totaal aantal inodes in deze image en op welke disk block deze inodes starten.
 
@@ -26,7 +26,7 @@ Met `-s` kan je de bytes printen startend van een bepaalde byte offset.
    
 4. Bekijk nu met `hd` de disk block waar de inodes starten. Kan je de root directory terugvinden? Op welke data block staat de root directory bewaard? Print deze data block met `hd` ter verificatie.
 
-> :bulb: De root directory is altijd opgeslagen in inode 1 in xv6.
+   > :bulb: De root directory is altijd opgeslagen in inode 1 in xv6.
 
 5. De laatste entry in de root directory (hint: [`struct dirent`][dirent]) is opnieuw een folder.
    Wat is de naam van deze directory?
