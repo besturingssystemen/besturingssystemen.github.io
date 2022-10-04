@@ -1,0 +1,32 @@
+From 51f0ee1f0a4c5ae013c7ce9196e309a130185962 Mon Sep 17 00:00:00 2001
+From: Fritz Alder <fritz.alder@cs.kuleuven.be>
+Date: Mon, 25 Oct 2021 10:31:18 +0200
+Subject: [PATCH 8/8] Add apt update to autograding
+
+---
+ .github/classroom/autograding.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/.github/classroom/autograding.json b/.github/classroom/autograding.json
+index 1da2af5..f189b27 100644
+--- a/.github/classroom/autograding.json
++++ b/.github/classroom/autograding.json
+@@ -2,7 +2,7 @@
+   "tests": [
+     {
+       "name": "Simple test",
+-      "setup": "sudo apt install gcc-riscv64-unknown-elf qemu-system-misc",
++      "setup": "sudo apt update && sudo apt install gcc-riscv64-unknown-elf qemu-system-misc",
+       "run": "make test",
+       "input": "",
+       "output": "",
+@@ -11,4 +11,4 @@
+       "points": null
+     }
+   ]
+-}
+\ No newline at end of file
++}
+-- 
+2.25.1
+
