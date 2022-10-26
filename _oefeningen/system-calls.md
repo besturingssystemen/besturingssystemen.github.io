@@ -5,7 +5,7 @@ nav_order: 2
 nav_exclude: false
 search_exclude: false
 has_children: true
-has_toc: false
+has_toc: true
 ---
 
 In deze oefenzitting leren jullie over de werking van system calls in xv6.
