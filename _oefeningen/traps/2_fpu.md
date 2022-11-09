@@ -52,13 +52,13 @@ Op RISC-V zijn er 32 floating-point registers, genaamd `f0` tot `f31`, en een fl
    Het [`mstatus`](../../../img/mstatus.png) CSR bevat twee bits (`FS`) die de status van de FPU beheren.
    De FPU kan aangezet worden door `FS` op `01` te zetten.
 
-  > :warning: It seems that if you have a specific version of qemu, this FS bit is ignored. This seems to be a bug in qemu that was fixed in later versions.
-  > You can check this by running `qemu-system-riscv64 --version`. If you have version 6.x.x, the above code may give no error. In that case, just proceed as if you would have gotten one.
-  > The error should look like this error below.
-   ```
-   usertrap(): unexpected scause 0x0000000000000002 pid=3
-            sepc=0x000000000000000c stval=0x0000000000000000
-   ```
+    > :warning: It seems that if you have a specific version of qemu, this FS bit is ignored. This seems to be a bug in qemu that was fixed in later versions.
+    > You can check this by running `qemu-system-riscv64 --version`. If you have version 6.x.x, the above code may give no error. In that case, just proceed as if you would have gotten one.
+    > The error should look like this error below.
+    ```
+    usertrap(): unexpected scause 0x0000000000000002 pid=3
+              sepc=0x000000000000000c stval=0x0000000000000000
+    ```
 
 3. Zorg ervoor dat de FPU globaal aanstaat.
    De initiële waarde voor `mstatus` [wordt gezet][write mstatus] in de functie [`start`][start], de eerste C-functie die in de kernel wordt uitgevoerd.
