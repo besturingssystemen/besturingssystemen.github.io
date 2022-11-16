@@ -27,8 +27,7 @@ De permanente evaluatie (tesamen met deelname aan de kaartjessessies) staat op 4
 | OS Interfaces | 5 oktober    | 11/10 23h59 - 1 week  | xv6 boek H1
 | System calls  | 12 oktober   | 25/10 23h59 - 2 weeks | xv6 boek H2
 | Virtual Memory| 26 oktober   | 8/11 23h59 - 2 weeks | xv6 boek H3, kennis concepten `virtual memory`, `paging` en `page tables` ([video](https://www.youtube.com/watch?v=JgTXJ-ZV5Zw))
-| Traps         | 9 november  | 15/11 23h59 - 1 week  | xv6 boek H4 + H5
-| Locks         | 16 november  | **06/12 23h59 - 3 weeks** | xv6 boek H6 + H7
-| File  systems | 7 december   | 20/12 23h59 - 2 weeks | xv6 boek H8
-
-<!-- | **Geen oefenzitting** | 30 november   | -  | - -->
+| Traps         | 9 november   | 15/11 23h59 - 1 week  | xv6 boek H4 + H5
+| Locks         | 16 november  | 29/11 23h59 - 2 weeks | xv6 boek H6 + H7
+| File  systems | 30 november  | 13/12 23h59 - 2 weeks | xv6 boek H8
+| **Geen oefenzitting** | 7 december   | -  | -
